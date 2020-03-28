@@ -14,10 +14,14 @@ function App() {
     <div>
       <Nav />
       <Switch>
-        <Route exact path="/" component={Books}/>
-        <Route exact path="/books" component={Books}/>
-        <Route exact path="/books/:id" component={Detail}/>
-        <Route path = "*" component={NoMatch}/>
+        <Route exact path="/"/>
+          <Books/>
+        <Route exact path="/books"/>
+          <Books/>
+        <Route exact path="/books/:id"/>
+          <Detail/>
+        <Route path = "*"/>
+          <NoMatch/>
       </Switch>
     </div>
     </BrowserRouter>
